@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cinema_app.CinemaController" stylesheets="@movies.css" >
+    <left>
+        <StackPane>
+<Rectangle width="200"
+fx:id="menu_rectangle"
+height="700"
+fill="dimgray"
+stroke="black"
+strokeWidth="2"/>
+
+
+        <VBox spacing="0">
+            <padding>
+                <Insets top="2" left="2"/>
+            </padding>
+            <Button styleClass="menu_buttons" text="Hide Menu" onAction="#hide"
+                    prefWidth="197" prefHeight="80" fx:id="hide"/>
+            <Button styleClass="menu_buttons" text="Book Movies" fx:id="book" onAction="#bookMovies"
+                    prefWidth="197" prefHeight="80"/>
+            <Button styleClass="menu_buttons" text="My Bookings" fx:id="myBooking" onAction="#myBooking"
+                    prefWidth="197" prefHeight="80"/>
+            <Button styleClass="menu_buttons" text="Upcoming Movies" fx:id="upcoming" onAction="#upcomingMovies"
+                    prefWidth="197" prefHeight="80"/>
+            <Button styleClass="menu_buttons" text="Log Out" fx:id="logOut"
+                    prefWidth="197" prefHeight="80" onAction="#logout"/>
+        </VBox>
+        </StackPane>
+    </left>
+    <center>
+<VBox alignment="TOP_CENTER" fx:id="vBox" spacing="20.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label text="Book Movies" fx:id="top_label" alignment="CENTER" prefHeight="50" prefWidth="200" maxWidth="200" />
+    <AnchorPane fx:id="anchor" styleClass="Anchor">
+        <Rectangle fx:id="rectangle1"
+                   AnchorPane.leftAnchor="0"
+                   AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                   width="200"
+                   height="158"
+                   stroke="black"
+                   strokeWidth="2"
+                   arcWidth="10"
+                   arcHeight="10"
+                    />
+        <Label
+               styleClass="title" fx:id="Movie1"
+               AnchorPane.leftAnchor="220" AnchorPane.topAnchor="22.5" wrapText="true" maxWidth="220" />
+
+        <Label  fx:id="Movie1Len" AnchorPane.leftAnchor="220" styleClass="length"
+               AnchorPane.topAnchor="75" />
+        
+        <Button text="Book Now" prefWidth="100" fx:id="Movie1Button" prefHeight="50" styleClass="not_menu_button"
+                AnchorPane.leftAnchor="330" AnchorPane.topAnchor="105" onAction="#pressButton"/>
+        <Label  fx:id="Movie1Seat" AnchorPane.leftAnchor="220" styleClass="length"
+               AnchorPane.topAnchor="75" managed="false" visible="false"/>
+
+        <Label  fx:id="Movie1Time" AnchorPane.leftAnchor="220" styleClass="length"
+               AnchorPane.topAnchor="75" managed="false" visible="false" />
+
+
+    </AnchorPane>
+    <AnchorPane fx:id="anchor2" styleClass="Anchor">
+        <Rectangle fx:id="rectangle2"
+                   AnchorPane.leftAnchor="0"
+                   AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                   width="200"
+                   height="158"
+                   stroke="black"
+                   strokeWidth="2"
+                   arcWidth="10"
+                   arcHeight="10"
+        />
+        <Label  styleClass="title" fx:id="Movie2" wrapText="true" maxWidth="220"
+               AnchorPane.leftAnchor="220" AnchorPane.topAnchor="22.5" />
+
+        <Label  AnchorPane.leftAnchor="220" fx:id="Movie2Len"
+               styleClass="length" AnchorPane.topAnchor="75" />
+        <Button text="Book Now" prefWidth="100" prefHeight="50" styleClass="not_menu_button" fx:id="Movie2Button"
+                AnchorPane.leftAnchor="330" AnchorPane.topAnchor="105" onAction="#pressButton"/>
+
+    </AnchorPane>
+    <AnchorPane fx:id="anchor3" styleClass="Anchor">
+        <Rectangle fx:id="rectangle3"
+                   AnchorPane.leftAnchor="0"
+                   AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                   width="200"
+                   height="158"
+                   stroke="black"
+                   strokeWidth="2"
+                   arcWidth="10"
+                   arcHeight="10"
+        />
+        <Label  styleClass="title" fx:id="Movie3" wrapText="true" maxWidth="220"
+               AnchorPane.leftAnchor="220" AnchorPane.topAnchor="22.5" />
+
+        <Label  AnchorPane.leftAnchor="220" fx:id="Movie3Len"
+               styleClass="length" AnchorPane.topAnchor="75" />
+        <Button text="Book Now" prefWidth="100" prefHeight="50" styleClass="not_menu_button"
+                AnchorPane.leftAnchor="330" AnchorPane.topAnchor="105" fx:id="Movie3Button" onAction="#pressButton"/>
+
+    </AnchorPane>
+    <AnchorPane>
+        <Button text="Previous" fx:id="prev" AnchorPane.leftAnchor="20" prefHeight="50" prefWidth="200"
+                styleClass="not_menu_button" onAction="#previous"/>
+        <Button text="Next" fx:id="next" AnchorPane.leftAnchor="230" prefHeight="50" prefWidth="200"
+                styleClass="not_menu_button" onAction="#next"/>
+    </AnchorPane>
+
+
+</VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,35 @@
+.Anchor {
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-background-color: #5f9ea0;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-radius: 10;
+}
+#top_label{
+-fx-text-alignment: center;
+-fx-font-size: 18;
+-fx-border-color:#2f4f4f;
+-fx-border-width:2;
+-fx-background-color:#5f9ea0;
+-fx-background-radius:10;
+-fx-border-radius:10;
+}
+.title{
+-fx-font-size: 16;
+}
+.length{
+-fx-font-size: 14;
+}
+.not_menu_button{
+-fx-border-radius:10;
+-fx-background-radius:10;
+-fx-font-size: 14;
+}
+.menu_buttons{
+-fx-font-size: 18;
+-fx-background-color:#696969;
+}
+.menu_buttons:hover{
+-fx-background-color:#d3d3d3;
+}
